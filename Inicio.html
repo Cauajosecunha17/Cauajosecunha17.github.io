@@ -37,7 +37,7 @@
     <meta property="og:description" content="">
     <meta property="og:type" content="website">
   <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
-  <body class="u-body u-xl-mode" data-lang="pt"><header class="u-clearfix u-custom-color-3 u-header" id="sec-b089" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><div class="u-clearfix u-sheet u-sheet-1">
+  <body data-home-page="Inicio.html" data-home-page-title="Inicio" class="u-body u-xl-mode" data-lang="pt"><header class="u-clearfix u-custom-color-3 u-header" id="sec-b089" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><div class="u-clearfix u-sheet u-sheet-1">
         <a href="https://link.mercadopago.com.br/cjservicosofc" class="u-border-none u-btn u-button-style u-custom-color-5 u-btn-1" target="_blank">Doe aqui p/&nbsp;<br>o Servidor
         </a>
         <h2 class="u-text u-text-1">CJ&nbsp;SERVERS</h2>
@@ -143,9 +143,9 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
         
         // Adiciona conteúdo ao div
         div.innerHTML = '<h2>Status do Servidor</h2>' +
+                        '<p>Status do Servidor: ' + (data.online ? 'Aberto' : 'Fechado') + '</p>' +
                         '<p>MOTD do Servidor: ' + data.motd.clean + '</p>' +
-                        '<p>Jogadores online: ' + data.players.online + '/' + data.players.max + '</p>' +
-                        '<p>Status do Servidor: ' + (data.online ? 'Online' : 'Offline') + '</p>';
+                        '<p>Jogadores online: ' + data.players.online + '/' + data.players.max + '</p>';
         
         // Adiciona o div ao contêiner específico
         document.getElementById('statusServidor').appendChild(div);

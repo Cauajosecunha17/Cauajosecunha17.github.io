@@ -9,8 +9,11 @@
 <link rel="stylesheet" href="Inicio.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
-    <meta name="generator" content="Nicepage 5.21.3, nicepage.com">
+    <meta name="generator" content="Nicepage 5.21.10, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    
+    
+    
     
     
     
@@ -73,10 +76,56 @@
         <a href="Cadastro.html" class="u-border-none u-btn u-btn-rectangle u-button-style u-color-scheme-summer-time u-custom-color-3 u-radius-0 u-btn-1">Querooo!</a>
       </div>
     </section>
-    <section class="u-clearfix u-custom-color-3 u-section-2" id="sec-042e">
+    <section class="u-clearfix u-custom-color-3 u-section-2" id="carousel_5135">
       <div class="u-clearfix u-sheet u-sheet-1"></div>
     </section>
-    <section class="u-clearfix u-container-align-center u-custom-color-5 u-section-3" id="sec-8ae8">
+    <section class="u-clearfix u-custom-color-5 u-section-3" id="carousel_32d6">
+      <div class="u-clearfix u-sheet u-valign-middle-xs u-sheet-1">
+        <h2 class="u-align-center u-text u-text-default u-text-1">Mapa do Mundo</h2>
+      </div>
+    </section>
+    <section class="u-clearfix u-custom-color-5 u-section-4" id="sec-99df">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-clearfix u-custom-html u-expanded-width u-custom-html-1">
+          <style> #iframeContainer {
+            position: relative;
+            width: 100%;
+            max-width: 800px; /* Defina a largura máxima do contêiner conforme necessário */
+            margin: 0 auto; /* Centraliza o contêiner na página */
+        }
+        #Mapa3D {
+            width: 100%;
+            height: 400px;
+            border: 2px solid DodgerBlue;
+        }
+        #fullscreenButton {
+            background-color: #014900;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        } </style>
+          <div id="iframeContainer">
+            <iframe id="Mapa3D" src="https://adapted-duly-mustang.ngrok-free.app/" frameborder="0" allowfullscreen=""></iframe>
+            <button id="fullscreenButton" onclick="toggleFullScreen()">Ver em tela cheia</button>
+          </div>
+          <script> function toggleFullScreen() {
+        var iframe = document.getElementById('Mapa3D');
+        if (!document.fullscreenElement) {
+            iframe.requestFullscreen().catch(err => {
+                console.error(`Erro ao tentar ativar o modo de tela cheia: ${err.message}`);
+            });
+        } else {
+            document.exitFullscreen();
+        }
+    } </script>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-custom-color-3 u-section-5" id="sec-042e">
+      <div class="u-clearfix u-sheet u-sheet-1"></div>
+    </section>
+    <section class="u-clearfix u-container-align-center u-custom-color-5 u-section-6" id="sec-8ae8">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h1 class="u-align-center u-text u-text-default u-text-1">Apoie nosso Servidor</h1>
         <p class="u-align-center u-text u-text-2"> Olá, jogador! Nós trabalhamos duro para manter nosso servidor online e gratuito para todos.<br>&nbsp;No entanto, manter um servidor tem seus custos. Se você gosta de jogar aqui e quer nos ajudar a continuar oferecendo este espaço incrível, considere fazer uma doação.<br>

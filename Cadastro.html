@@ -177,9 +177,55 @@
         <p class="u-align-center u-text u-text-default u-text-9"> • O IP (Registro do dispositivo na rede) fica acessível aos ADMs, ou seja, não adianta trocar de conta Xbox ou WhatsApp se for banido.<br>• TUDO o que cada jogador faz no jogo, desde a primeira entrada, é TUDO Monitorado, nada passa em branco.
         </p>
         <p class="u-align-center u-text u-text-10"> ⚠️A DESOBEDIÊNCIA DAS REGRAS RESULTARÁ EM BANIMENTO⚠️</p>
-        <p class="u-align-center u-text u-text-11">⚠️Envie sua Gamertag para o ADM⚠️<br>Para ele autorizar sua entrada nos grupos!<br>Não se esqueça!
-        </p>
-        <a href="Adicionar-Servidor.html" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-1">Eu aceito as regras!</a>
+        <p class="u-align-center u-text u-text-11">⚠️Envie sua Gamertag para o ADM⚠️<br>Para ele autorizar sua entrada nos grupos!<br>Não se esqueça!</p>
+          <style>
+          #acceptRules, #sentGamertag {
+              transform: scale(2);
+              margin-right: 10px;
+          }
+          #rulesLabel, #gamertagLabel, #continueBtn {
+              font-size: 20px;
+              display: block; /* Faz com que os elementos apareçam um abaixo do outro */
+              margin: 20px auto; /* Adiciona um espaço acima e abaixo dos elementos e os centraliza */
+              text-align: center; /* Centraliza o texto dentro dos elementos */
+          }
+          #continueBtn {
+              background-color: #478ac9;
+              color: white;
+          }
+          </style>
+
+          <label id="rulesLabel"><input type="checkbox" id="acceptRules"> Eu aceito as regras!</label>
+          <label id="gamertagLabel"><input type="checkbox" id="sentGamertag"> Enviei minha Gamertag ao Administrador!</label>
+          <button id="continueBtn" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-1" disabled>Continuar</button>
+
+          <script>
+          document.getElementById("acceptRules").addEventListener("change", function() {
+              if (this.checked) {
+                  alert("Obrigado por aceitar as regras!");
+              }
+              checkCheckboxes();
+          });
+
+          document.getElementById("sentGamertag").addEventListener("change", function() {
+              if (this.checked) {
+                  alert("Você tem certeza que enviou? Se não enviou, o Administrador não tem bola de cristal para adivinhar e não conseguirá autorizar sua entrada no Servidor!");
+              }
+              checkCheckboxes();
+          });
+
+          function checkCheckboxes() {
+              var acceptRulesChecked = document.getElementById("acceptRules").checked;
+              var sentGamertagChecked = document.getElementById("sentGamertag").checked;
+              document.getElementById("continueBtn").disabled = !(acceptRulesChecked && sentGamertagChecked);
+          }
+
+          document.getElementById("continueBtn").addEventListener("click", function() {
+              if (!this.disabled) {
+                  window.location.href = "Adicionar-Servidor.html";
+              }
+          });
+          </script>
       </div>
       
       

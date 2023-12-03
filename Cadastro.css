@@ -148,11 +148,13 @@
   min-height: 66px;
 } .u-section-3 {
   min-height: 455px;
+  background-image: none;
 }
 
 .u-section-3 .u-layout-wrap-1 {
   margin-top: 0;
   margin-bottom: 0;
+  background-image: none;
 }
 
 .u-section-3 .u-layout-cell-1 {
@@ -327,6 +329,7 @@
   min-height: 66px;
 } .u-section-5 {
   min-height: 508px;
+  background-image: none;
 }
 
 .u-section-5 .u-layout-wrap-1 {
